@@ -1,16 +1,23 @@
 import { style } from "@vanilla-extract/css";
 
 export const sidebarConrainer = style({
-  width: "250px",
+  display: "flex",
+  flexDirection: "column",
+  gap: "20px",
+
+  width: "100%",
+  maxWidth: "250px",
+  height: "100vh",
   backgroundColor: "#f1f1f1",
-  padding: "10px",
+  padding: "12px",
+  overflowY: "auto",
   borderRight: "1px solid #ccc",
 });
 
 export const contact = style({
-  padding: "10px",
+  padding: "12px",
   width: "100%",
-  borderBottom: "1px solid #ddd",
+  borderRadius: "20px",
   ":hover": {
     backgroundColor: "#e0e0e0",
   },
@@ -25,6 +32,8 @@ export const contact = style({
 
 export const contactContainer = style({
   display: "flex",
+  justifyContent: "center",
   flexDirection: "column",
-  alignItems: "flex-start",
+  alignItems: "center",
+  gap: "16px",
 });

@@ -6,6 +6,7 @@ export type TMessage = {
 export type TChat = {
   id: number;
   name: string;
+  photo?: string;
   messages: TMessage[];
 };
 

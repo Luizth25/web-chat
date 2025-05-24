@@ -24,15 +24,20 @@ export const message = style({
   margin: "6px 0",
   maxWidth: "60%",
   borderRadius: "8px",
+  display: "flex",
 });
 
 export const messageMe = style([
   message,
   {
     backgroundColor: "#dcf8c6",
-    alignSelf: "flex-end",
   },
 ]);
+
+export const messageMeText = style({
+  width: "100%",
+  textAlign: "end",
+});
 
 export const messageThem = style([
   message,

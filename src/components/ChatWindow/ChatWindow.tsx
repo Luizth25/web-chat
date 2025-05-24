@@ -9,7 +9,8 @@ import {
   chatWindow,
   message,
   messageMe,
-  messageThem
+  messageMeText,
+  messageThem,
 } from "./ChatWindow.css";
 
 const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
@@ -19,6 +20,12 @@ const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
     if (!input.trim()) return;
     onSend(input);
     setInput("");
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSend();
+    }
   };
 
   return (
@@ -34,7 +41,7 @@ const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
               msg.fromMe ? messageMe : messageThem
             }`}
           >
-            <p>{msg.text}</p>
+            <p className={`${msg.fromMe ? messageMeText : ""}`}>{msg.text}</p>
           </div>
         ))}
       </div>
@@ -43,6 +50,7 @@ const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
           className={chatInputField}
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder="Digite uma mensagem..."
         />
         <button className={chatInputButton} onClick={handleSend}>
