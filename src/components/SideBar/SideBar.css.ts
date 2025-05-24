@@ -22,6 +22,7 @@ export const contactButton = style({
   color: vars.color.sidebarText,
   ":hover": {
     backgroundColor: vars.color.sidebarButtonHover,
+    color: vars.color.textPrimary,
   },
   ":active": {
     backgroundColor: vars.color.sidebarButtonActive,

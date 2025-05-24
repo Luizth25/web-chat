@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { bodyBase, darkTheme, lightTheme } from "../../styles/theme.css";
 import type { TChatWindowProps } from "../../types";
 import {
   chatHeader,
@@ -15,6 +16,7 @@ import {
 
 const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
   const [input, setInput] = useState("");
+  const [dark, setDark] = useState(true);
 
   const handleSend = () => {
     if (!input.trim()) return;
@@ -28,10 +30,19 @@ const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
     }
   };
 
+    useEffect(() => {
+      document.body.className = `${dark ? darkTheme : lightTheme} ${bodyBase}`;
+    }, [dark]);
+
   return (
     <section className={chatWindow}>
       <div className={chatHeader}>
         <p>{contactName || "Nenhum contato selecionado"}</p>
+        <button
+          style={{ background: "none", border: "none", fontSize: "1rem" }}
+          onClick={() => setDark(!dark)}>
+            {dark ? "🌙" : "☀️"}
+        </button>
       </div>
       <div className={chatMessages}>
         {messages.map((msg, index) => (

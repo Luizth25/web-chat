@@ -53,8 +53,8 @@ export const lightTheme = createTheme(vars, {
     // Sidebar
     sidebarBackground: "#E7ECF7",
     sidebarButton: "#F1F4FA",
-    sidebarButtonHover: "#000",
-    sidebarButtonActive: "#E7ECF7",
+    sidebarButtonHover: "#D9E1F2",
+    sidebarButtonActive: "#D9E1F2",
     sidebarText: "#222831",
 
     // Mensagens

@@ -12,6 +12,9 @@ export const chatHeader = style({
   padding: vars.padding.xlarge,
   background: vars.color.background,
   fontWeight: "bold",
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
 });
 
 export const chatMessages = style({
