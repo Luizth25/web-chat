@@ -1,4 +1,5 @@
 import { useState } from "react";
+import type { TChatWindowProps } from "../../types";
 import {
   chatHeader,
   chatInput,
@@ -11,12 +12,6 @@ import {
   messageThem
 } from "./ChatWindow.css";
 
-type TChatWindowProps = {
-  messages: Array<{ text: string; fromMe: boolean }>;
-  onSend: (message: string) => void;
-  contactName?: string;
-};
-
 const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
   const [input, setInput] = useState("");
 
@@ -27,9 +22,9 @@ const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
   };
 
   return (
-    <div className={chatWindow}>
+    <section className={chatWindow}>
       <div className={chatHeader}>
-        {contactName || "Nenhum contato selecionado"}
+        <p>{contactName || "Nenhum contato selecionado"}</p>
       </div>
       <div className={chatMessages}>
         {messages.map((msg, index) => (
@@ -39,7 +34,7 @@ const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
               msg.fromMe ? messageMe : messageThem
             }`}
           >
-            {msg.text}
+            <p>{msg.text}</p>
           </div>
         ))}
       </div>
@@ -54,7 +49,7 @@ const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
           Enviar
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

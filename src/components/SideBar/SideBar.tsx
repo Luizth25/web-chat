@@ -1,27 +1,21 @@
-import { contact, sidebarConrainer } from "./SideBar.css";
-
-type TSidebarProps = {
-  chats: {
-    id: number;
-    name: string;
-    messages: {
-        fromMe: boolean;
-        text: string;
-    }[];
-  }[]
-  onSelect: (id: number) => void;
-};
+import type { TSidebarProps } from "../../types";
+import { contact, contactContainer, sidebarConrainer } from "./SideBar.css";
 
 const Sidebar = ({ chats, onSelect }: TSidebarProps) => {
   return (
-    <div className={sidebarConrainer}>
+    <aside className={sidebarConrainer}>
       <h2>Conversas</h2>
-      {chats.map((chat) => (
-        <div key={chat.id} onClick={() => onSelect(chat.id)} className={contact}>
-          {chat.name}
-        </div>
-      ))}
-    </div>
+      <div className={contactContainer}>
+        {chats.map((chat) => (
+          <button
+            key={chat.id}
+            onClick={() => onSelect(chat.id)}
+            className={contact}>
+              {chat.name}
+          </button>
+        ))}
+      </div>
+    </aside>
   );
 };
 

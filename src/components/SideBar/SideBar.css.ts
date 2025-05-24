@@ -9,7 +9,7 @@ export const sidebarConrainer = style({
 
 export const contact = style({
   padding: "10px",
-  cursor: "pointer",
+  width: "100%",
   borderBottom: "1px solid #ddd",
   ":hover": {
     backgroundColor: "#e0e0e0",
@@ -17,4 +17,14 @@ export const contact = style({
   ":active": {
     backgroundColor: "#d0d0d0",
   },
+  ":focus": {
+    outline: "none",
+    backgroundColor: "#d0d0d0",
+  },
+});
+
+export const contactContainer = style({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "flex-start",
 });

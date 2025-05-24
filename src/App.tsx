@@ -3,12 +3,12 @@ import ChatWindow from "./components/ChatWindow";
 import Sidebar from "./components/SideBar";
 import { mockChats } from "./mock";
 import { appContainer } from "./styles/globalStyles.css";
+import type { TChat } from "./types";
 
 function App() {
-  const [selectedChat, setSelectedChat] = useState<any | null>(null)
+  const [selectedChat, setSelectedChat] = useState<TChat | null>(null)
   
   const handleSelectChat = (chatId: number) => {
-    console.log("Selected chat", chatId);
     const chat = mockChats.find((chat) => chat.id === chatId);
     setSelectedChat(chat ? chat : null);
   };
@@ -23,14 +23,14 @@ function App() {
 
 
   return (
-    <div className={appContainer}>
+    <main className={appContainer}>
       <Sidebar chats={mockChats} onSelect={handleSelectChat}/>
       <ChatWindow
         messages={selectedChat?.messages || []}
         onSend={handleSendMessage}
         contactName={selectedChat?.name}
       />
-    </div>
+    </main>
   )
 }
 export default App
