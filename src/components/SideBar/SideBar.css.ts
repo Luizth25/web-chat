@@ -1,32 +1,34 @@
 import { style } from "@vanilla-extract/css";
+import { baseHeight } from "../../styles/globalStyles.css";
+import { vars } from "../../styles/theme.css";
 
-export const sidebarConrainer = style({
+export const sidebarContainer = style({
   display: "flex",
   flexDirection: "column",
   gap: "20px",
 
   width: "100%",
   maxWidth: "250px",
-  height: "100vh",
-  backgroundColor: "#f1f1f1",
-  padding: "12px",
+  height: baseHeight,
+  backgroundColor: vars.color.sidebarBackground,
+  padding: vars.padding.large,
   overflowY: "auto",
-  borderRight: "1px solid #ccc",
 });
 
-export const contact = style({
-  padding: "12px",
+export const contactButton = style({
+  padding: vars.padding.large,
   width: "100%",
-  borderRadius: "20px",
+  borderRadius: "8px",
+  color: vars.color.sidebarText,
   ":hover": {
-    backgroundColor: "#e0e0e0",
+    backgroundColor: vars.color.sidebarButtonHover,
   },
   ":active": {
-    backgroundColor: "#d0d0d0",
+    backgroundColor: vars.color.sidebarButtonActive,
   },
   ":focus": {
     outline: "none",
-    backgroundColor: "#d0d0d0",
+    backgroundColor: vars.color.sidebarButtonActive,
   },
 });
 

@@ -1,4 +1,6 @@
 import { style } from "@vanilla-extract/css";
+import { innerPaddding } from "../../styles/globalStyles.css";
+import { vars } from "../../styles/theme.css";
 
 export const chatWindow = style({
   flex: 1,
@@ -7,22 +9,22 @@ export const chatWindow = style({
 });
 
 export const chatHeader = style({
-  padding: "10px",
-  background: "#ededed",
+  padding: vars.padding.xlarge,
+  background: vars.color.background,
   fontWeight: "bold",
 });
 
 export const chatMessages = style({
   flex: 1,
-  padding: "10px",
+  padding: vars.padding.large,
   overflowY: "auto",
-  background: "#fff",
+  background: vars.color.surface,
 });
 
 export const message = style({
-  padding: "8px 12px",
+  padding: innerPaddding,
   margin: "6px 0",
-  maxWidth: "60%",
+  width: "100%",
   borderRadius: "8px",
   display: "flex",
 });
@@ -30,7 +32,8 @@ export const message = style({
 export const messageMe = style([
   message,
   {
-    backgroundColor: "#dcf8c6",
+    borderRadius: "8px 8px 20px 8px",
+    backgroundColor: vars.color.messageMine,
   },
 ]);
 
@@ -42,25 +45,31 @@ export const messageMeText = style({
 export const messageThem = style([
   message,
   {
-    backgroundColor: "#e1e1e1",
-    alignSelf: "flex-start",
+    borderRadius: "8px 8px 8px 20px",
+    backgroundColor: vars.color.messageTheirs,
   },
 ]);
 
 export const chatInput = style({
   display: "flex",
-  padding: "10px",
-  background: "#f9f9f9",
+  padding: vars.padding.large,
+  background: vars.color.inputBackground,
 });
 
 export const chatInputField = style({
   flex: 1,
-  padding: "8px",
-  border: "1px solid #ccc",
+  padding: vars.padding.large,
+  border: `1px solid ${vars.color.inputBorder}`,
+  background: vars.color.inputBackground,
+  color: vars.color.inputText,
   borderRadius: "4px",
 });
 
 export const chatInputButton = style({
-  marginLeft: "10px",
-  padding: "8px 12px",
+  padding: innerPaddding,
+  background: vars.color.sendButton,
+  marginLeft: "12px",
+  ":hover": {
+    background: vars.color.sendButtonHover,
+  },
 });
