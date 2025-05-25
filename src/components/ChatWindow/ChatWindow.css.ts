@@ -7,7 +7,7 @@ export const chatWindow = style({
   display: "flex",
   flexDirection: "column",
   "@media": {
-    "screen and (max-width: 420px)": {
+    "screen and (max-width: 660px)": {
       height: "450px;",
     },
   },

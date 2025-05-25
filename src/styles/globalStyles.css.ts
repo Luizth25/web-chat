@@ -9,7 +9,7 @@ export const appContainer = style({
   height: baseHeight,
   fontFamily: "Arial, sans-serif",
   "@media": {
-    "screen and (max-width: 420px)": {
+    "screen and (max-width: 660px)": {
       flexDirection: "column",
     },
   },

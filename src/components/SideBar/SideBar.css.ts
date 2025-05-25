@@ -31,10 +31,12 @@ export const contactButton = style({
     outline: "none",
     backgroundColor: vars.color.sidebarButtonActive,
   },
-
   "@media": {
+    "screen and (max-width: 660px)": {
+      width: "350px",
+    },
     "screen and (max-width: 420px)": {
-      width: "200px",
+      width: "250px",
     },
   },
 });
