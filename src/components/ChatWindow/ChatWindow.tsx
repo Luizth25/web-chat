@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { formatDate } from "../../functions";
 import { bodyBase, darkTheme, lightTheme } from "../../styles/theme.css";
 import type { TChatWindowProps } from "../../types";
 import {
@@ -12,6 +13,7 @@ import {
   messageMe,
   messageMeText,
   messageThem,
+  timeLabel,
 } from "./ChatWindow.css";
 
 const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
@@ -53,6 +55,9 @@ const ChatWindow = ({ messages, onSend, contactName }: TChatWindowProps) => {
             }`}
           >
             <p className={`${msg.fromMe ? messageMeText : ""}`}>{msg.text}</p>
+            <small className={timeLabel}>
+              {formatDate(msg.timestamp)}
+            </small>
           </div>
         ))}
       </div>

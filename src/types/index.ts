@@ -1,6 +1,7 @@
 export type TMessage = {
   fromMe: boolean;
   text: string;
+  timestamp: string;
 };
 
 export type TChat = {

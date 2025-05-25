@@ -26,9 +26,9 @@ export const chatMessages = style({
 
 export const message = style({
   padding: innerPaddding,
-  margin: "6px 0",
-  width: "100%",
-  borderRadius: "8px",
+  gap: "8px",
+  alignItems: "center",
+  margin: "8px 0",
   display: "flex",
 });
 
@@ -71,8 +71,14 @@ export const chatInputField = style({
 export const chatInputButton = style({
   padding: innerPaddding,
   background: vars.color.sendButton,
+  borderRadius: "4px",
   marginLeft: "12px",
   ":hover": {
     background: vars.color.sendButtonHover,
   },
+});
+
+export const timeLabel = style({
+  fontSize: "0.8rem",
+  color: vars.color.textMuted,
 });
