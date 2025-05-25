@@ -47,36 +47,36 @@ export const vars = createThemeContract({
 export const lightTheme = createTheme(vars, {
   color: {
     // Layout geral
-    background: "#F6F8FC",
-    surface: "#FFFFFF",
+    background: "#FFF3F0",
+    surface: "#FFFCFA",
 
     // Sidebar
-    sidebarBackground: "#E7ECF7",
-    sidebarButton: "#F1F4FA",
-    sidebarButtonHover: "#D9E1F2",
-    sidebarButtonActive: "#D9E1F2",
-    sidebarText: "#222831",
+    sidebarBackground: "#FCE8EF",
+    sidebarButton: "#FEEBED",
+    sidebarButtonHover: "#FFD4DC",
+    sidebarButtonActive: "#FFC7D1",
+    sidebarText: "#3A0F24",
 
     // Mensagens
-    messageMine: "#DCF2EA",
-    messageTheirs: "#E5EAFD",
-    messageText: "#1A1A1A",
+    messageMine: "#CFFAE3",
+    messageTheirs: "#E6E6FA",
+    messageText: "#1F1F1F",
 
     // Input
     inputBackground: "#FFFFFF",
-    inputBorder: "#CCCCCC",
+    inputBorder: "#D6BFC5",
     inputText: "#333333",
-    sendButton: "#FF4E8E",
-    sendButtonHover: "#E63C76",
+    sendButton: "#FF6392",
+    sendButtonHover: "#E94F7C",
 
     // Tipografia
-    text: "#1A1A1A",
-    textMuted: "#6C7A89",
-    textPrimary: "#3C3E64",
+    text: "#1F1F1F",
+    textMuted: "#7A6B76",
+    textPrimary: "#3E1131",
   },
   font: {
     body: "Inter, sans-serif",
-    heading: "Orbitron, sans-serif",
+    heading: "Poppins, sans-serif",
   },
   padding: {
     small: "4px",
@@ -91,32 +91,32 @@ export const lightTheme = createTheme(vars, {
 export const darkTheme = createTheme(vars, {
   color: {
     // Layout geral
-    background: "#0D0D0D",
-    surface: "#1A1A1A",
+    background: "#0A0A1F",
+    surface: "#121232",
 
     // Sidebar
-    sidebarBackground: "#141414",
-    sidebarButton: "#1F1F1F",
-    sidebarButtonHover: "#2C2C2C",
-    sidebarButtonActive: "#2C2C2C",
-    sidebarText: "#EEEEEE",
+    sidebarBackground: "#1A1A3D",
+    sidebarButton: "#23234B",
+    sidebarButtonHover: "#3B3B65",
+    sidebarButtonActive: "#4D4D77",
+    sidebarText: "#F2EAF8",
 
     // Mensagens
-    messageMine: "#253135",
-    messageTheirs: "#1E1E2F",
-    messageText: "#F1F1F1",
+    messageMine: "#1A9799",
+    messageTheirs: "#7A3BB0",
+    messageText: "#FFFFFF",
 
     // Input
-    inputBackground: "#1F1F1F",
-    inputBorder: "#333333",
-    inputText: "#F1F1F1",
-    sendButton: "#FF3864",
-    sendButtonHover: "#E52C55",
+    inputBackground: "#1F1F3B",
+    inputBorder: "#444466",
+    inputText: "#FFFFFF",
+    sendButton: "#FF4E9B",
+    sendButtonHover: "#D6387D",
 
     // Tipografia
-    text: "#E0E0E0",
-    textMuted: "#888888",
-    textPrimary: "#FF85B3",
+    text: "#EDEDED",
+    textMuted: "#9A9AB2",
+    textPrimary: "#EFB0FF",
   },
   font: {
     body: "Inter, sans-serif",
