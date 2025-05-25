@@ -8,4 +8,9 @@ export const appContainer = style({
   display: "flex",
   height: baseHeight,
   fontFamily: "Arial, sans-serif",
+  "@media": {
+    "screen and (max-width: 420px)": {
+      flexDirection: "column",
+    },
+  },
 });

@@ -6,6 +6,11 @@ export const chatWindow = style({
   flex: 1,
   display: "flex",
   flexDirection: "column",
+  "@media": {
+    "screen and (max-width: 420px)": {
+      height: "450px;",
+    },
+  },
 });
 
 export const chatHeader = style({

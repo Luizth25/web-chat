@@ -31,6 +31,12 @@ export const contactButton = style({
     outline: "none",
     backgroundColor: vars.color.sidebarButtonActive,
   },
+
+  "@media": {
+    "screen and (max-width: 420px)": {
+      width: "200px",
+    },
+  },
 });
 
 export const contactContainer = style({
